@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <title>Registro</title>
+    <link rel="icon" href="../img/tabicon.png">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1,maximum-scale=1,user-scalable=no">
+    <link rel="stylesheet" href="./css/style.css">
+    <link rel="stylesheet" href="./css/Bootstrap.css">
+</head>
+
+<body class="contactores">
+
+    <!--Formulario-->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+
+    <div class="modal-content">
+        <form action="contactores.php" method="post">
+            <br>
+            <div style="margin-right:40px;">
+                <img src="/img/Logo_RS_ODA.svg" alt="Logo" />
+            </div>
+            <h1>Registrate y recibe $1,200 pesos.</h1>
+            <h3 style="font-family:'AvenirNextUL'">Registra tu ticket de compra de Ojo de Agua y recibe una Gift Card con valor de $1,200 pesos, con la que podrás pagar cualquiera de nuestros tratamientos faciales (No incluye Reskin).</h3>
+
+            <input class="formutexto" type="text" placeholder="Nombre" name="first_name" required>
+            <input class="formutexto" type="text" placeholder="Apellidos" name="last_name" required>
+            <input class="formutexto" type="tel" placeholder="Teléfono a 10 dígitos" name="telefono" required pattern="[0-9]{10}">
+            <input class="formutexto" type="text" placeholder="Nota de Venta Ojo de Agua" name="ticket" required pattern="[0-9]{12}">
+            <div align="center" style="margin-right:50px;">
+                <button id="boton" type="submit" value="Enviar" class="btn btna">Enviar</button>
+            </div>
+            <button type="reset" id="limpiar" hidden=""></button>
+    </div>
+    </form>
+    <script>
+        $(document).ready(function() {
+            $("#limpiar").click();
+            $("#form-comun > textarea").html("");
+        });
+    </script>
+
+    <script src="../scripts/checkboxes.js"></script>
+
+    <!--Fin formulario-->
+
+</body>
+
+</html>
